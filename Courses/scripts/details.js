@@ -17,7 +17,7 @@ window.onload = function() {
 };
 
 function displayCourseDetails(course) {
-    // console test
+    // Console test ( my friends 2cent)
     console.log("Course Name: ", course.courseName);
     console.log("Instructor: ", course.instructor);
     console.log("Start Date: ", course.startDate);

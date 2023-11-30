@@ -23,7 +23,7 @@ function loadTable() {
                 cell2.innerHTML = data[i].courseName;
                 cell3.innerHTML = data[i].courseNum;
 
-                // Create a link with an onclick event to call onLinkClicked
+                // Create a link with an onclick event to call onLinkClicked (my friend 2cent)
                 let anchor = document.createElement("a");
                 anchor.href = `details.html?courseid=${data[i].id}`;
                 anchor.text = "See details"; 

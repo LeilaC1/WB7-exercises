@@ -12,7 +12,6 @@ function loadTable() {
     fetch("http://localhost:8081/api/courses")
         .then(response => response.json())
         .then(data => {
-            // tr
             for (let i = 0; i < data.length; i++) {
                 let row = tbody.insertRow(-1);
                 let cell1 = row.insertCell(0);
@@ -23,7 +22,19 @@ function loadTable() {
                 cell1.innerHTML = data[i].dept;
                 cell2.innerHTML = data[i].courseName;
                 cell3.innerHTML = data[i].courseNum;
-                cell4.innerHTML = '<a href="details.html">Show Details</a>';
+
+                // Create a link with an onclick event to call onLinkClicked
+                let anchor = document.createElement("a");
+                anchor.href = `details.html?courseid=${data[i].id}`;
+                anchor.text = "See details"; 
+                anchor.onclick = function() {
+                    onLinkClicked(data[i].id);
+                };
+
+                cell4.appendChild(anchor);
             }
         });
 }
+
+
+

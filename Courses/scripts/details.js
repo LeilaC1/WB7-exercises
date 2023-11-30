@@ -4,8 +4,8 @@ window.onload = function() {
     const urlParams = new URLSearchParams(location.search);
     let id = -1;
 
-    if (urlParams.has("courseid")) {
-        id = urlParams.get("courseid");
+    if (urlParams.has("courseid") === true){
+                id = urlParams.get("courseid");
 
         // make an AJAX call
         fetch(`http://localhost:8081/api/courses/${id}`)

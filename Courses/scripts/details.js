@@ -2,6 +2,7 @@
 
 window.onload = function() {
     const urlParams = new URLSearchParams(location.search);
+    console.log(location.search)
     let id = -1;
 
     if (urlParams.has("courseid") === true){

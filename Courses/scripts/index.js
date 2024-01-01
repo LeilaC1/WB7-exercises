@@ -24,12 +24,11 @@ function loadTable() {
                 cell3.innerHTML = data[i].courseNum;
 
                 // Create a link with an onclick event to call onLinkClicked (my friend 2cent)
+                //removed event did it textbook way (pardonne moi mon ami mais ca marche pas)
                 let anchor = document.createElement("a");
                 anchor.href = `details.html?courseid=${data[i].id}`;
                 anchor.text = "See details"; 
-                anchor.onclick = function() {
-                    onLinkClicked(data[i].id);
-                };
+               
 
                 cell4.appendChild(anchor);
             }
